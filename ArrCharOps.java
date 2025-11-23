@@ -165,7 +165,8 @@ public class ArrCharOps {
         for (int i = 0; i < arr.length; i++) {
             double exponent = arr.length - 1 - i;
             double base = 7;
-            hashSum += Math.pow(base, exponent);
+
+            hashSum += Math.pow(base, exponent) * arr[i];
         }
         return hashSum;
     }
