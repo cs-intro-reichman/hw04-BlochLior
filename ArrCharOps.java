@@ -134,8 +134,8 @@ public class ArrCharOps {
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
         boolean falseFlags1 = arr.length == 0 || beginIndex > endIndex;
-        boolean falseFlags2 = beginIndex < -1 || endIndex > arr.length;
-        boolean falseFlags3 = beginIndex > arr.length - 1 || endIndex > arr.length -1;
+        boolean falseFlags2 = beginIndex < 0 || endIndex > arr.length;
+        boolean falseFlags3 = beginIndex > arr.length - 1;
         boolean flags = falseFlags1 || falseFlags2 || falseFlags3;
         if (flags) {
             System.out.println("Improper inputs provided, returning null");

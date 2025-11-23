@@ -23,15 +23,16 @@ public class KeywordsDetector {
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         for (int i = 0; i < sentences.length; i++) {
             String currSentance = sentences[i];
+            String evalString = lowerCase(currSentance);
             int j = 0;
             while (j < keywords.length) {
-                if (currSentance.contains(keywords[j])) {
+                String currKeyword = lowerCase(keywords[j]);
+                if (evalString.contains(currKeyword)) {
                     System.out.println(currSentance);
                     break;
                 }
                 j++;
             }
-            i++;
         }
     }
 
